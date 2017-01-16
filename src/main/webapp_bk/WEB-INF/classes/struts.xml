@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+ 
+   <package name="simplesarkar" extends="struts-default">
+     
+    
+     
+      
+             
+      
+      <action name="logon" 
+            class="com.simplesarkar.actions.LogonAction" 
+            method="execute">
+            <result name="success">/LoginResponse.jsp</result>
+            <result name="failure">/SignInSignUp.jsp</result>
+            <result name="loggedout">/index.jsp</result>
+      </action>
+      
+      <action name="signup" 
+            class="com.simplesarkar.actions.SignupAction" 
+            method="execute">
+            <result name="success">/SignupResponse.jsp</result> 
+      </action>
+      
+      <action name="validateusersession" 
+            class="com.simplesarkar.actions.ValidateUserLoginAction" 
+            method="execute">
+            <result name="failure">/SignInSignUp.jsp</result>
+      </action>
+      
+        <action name="technician" 
+            class="com.simplesarkar.actions.TechnicianAction" 
+            method="execute">
+            <result name="success">/TechnicianProfile.jsp</result>
+        </action>
+      
+                 
+      <action name="index" 
+            class="com.simplesarkar.actions.IndexAction" 
+            method="execute">
+            <result name="success">/index.html</result> 
+      </action>
+      
+      
+   </package>
+</struts>
